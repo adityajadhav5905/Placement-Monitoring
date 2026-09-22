@@ -1,0 +1,38 @@
+{
+  "name": "placement-monitoring-backend",
+  "main": "worker.js",
+  "compatibility_date": "2024-11-11",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public"
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "OAUTH_KV",
+      "id": "725054bd5c914af6b30989abe04ccc0d"
+    }
+  ],
+  "observability": {
+    "enabled": true
+  },
+  "env": {
+    "production": {
+      "workers_dev": true,
+      "hyperdrive": [
+        {
+          "binding": "HYPERDRIVE",
+          "id": "3dc1f50676c04a33b70277b07721af83"
+        }
+      ],
+      "kv_namespaces": [
+        {
+          "binding": "OAUTH_KV",
+          "id": "125ce685428649bc9ddcfc492edb761b"
+        }
+      ],
+      "vars": {
+        "ALLOWED_ORIGINS": "https://placementmonitoring.vercel.app"
+      }
+    }
+  }
+}

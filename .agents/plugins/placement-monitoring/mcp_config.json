@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "placement-monitoring-tools": {
+      "command": "node",
+      "args": ["./backend/mcpServer.js"],
+      "env": {
+        "BACKEND_URL": "http://127.0.0.1:5000/api",
+        "API_KEY": "fca62d64a27546855b39922e967a1fb53086eb293c66f7f6a7cd67f8976a4dfc"
+      }
+    }
+  }
+}

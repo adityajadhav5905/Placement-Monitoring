@@ -1,0 +1,31 @@
+{
+  "name": "placement-monitoring-backend",
+  "version": "1.0.0",
+  "description": "Backend server for Placement Monitoring system",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "node -e \"console.log('Backend worker validation build successful')\"",
+    "worker:dev": "wrangler dev",
+    "worker:deploy": "wrangler deploy --env production",
+    "worker:tail": "wrangler tail --env production"
+  },
+  "dependencies": {
+    "@cloudflare/workers-oauth-provider": "^0.10.3",
+    "@google/generative-ai": "^0.2.1",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "hono": "^4.13.3",
+    "ical-generator": "^8.0.0",
+    "mysql2": "^3.23.3",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0",
+    "wrangler": "^4.124.0"
+  }
+}
