@@ -29,3 +29,5 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+
+deploy.bat
