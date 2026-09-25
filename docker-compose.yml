@@ -34,7 +34,6 @@ services:
       DATABASE_NAME: placement_monitoring
       API_KEY: fca62d64a27546855b39922e967a1fb53086eb293c66f7f6a7cd67f8976a4dfc
       NODE_ENV: production
-      GEMINI_API_KEY: ${GEMINI_API_KEY}
     ports:
       - "5000:5000"
     depends_on:

@@ -18,6 +18,7 @@ docker compose up --build
 ```
 
 This starts:
+
 1. **Database**: MySQL on port `3306` (with health checks).
 2. **Backend**: REST API on port `5000` (waits for Database to be healthy).
 3. **Frontend**: NGINX serving static React assets on port `8080` (redirecting SPA routing internally).
@@ -26,16 +27,16 @@ This starts:
 
 Configure these variables inside your production runtime or container environment:
 
-| Variable | Target | Description |
-| :--- | :--- | :--- |
-| `DATABASE_HOST` | Backend | MySQL server domain/address |
-| `DATABASE_PORT` | Backend | MySQL connection port (default `3306`) |
-| `DATABASE_USER` | Backend | MySQL connection user name |
-| `DATABASE_PASSWORD`| Backend | MySQL connection user password |
-| `DATABASE_NAME` | Backend | Database schema name |
-| `API_KEY` | Backend | Authentication token for POST/PUT/DELETE mutations |
-| `GEMINI_API_KEY` | Backend | Google Generative AI API Key for update parsers |
-| `BACKEND_URL` | MCP Server | Endpoint for Claude MCP commands to forward calls |
+| Variable            | Target     | Description                                        |
+| :------------------ | :--------- | :------------------------------------------------- |
+| `DATABASE_HOST`     | Backend    | MySQL server domain/address                        |
+| `DATABASE_PORT`     | Backend    | MySQL connection port (default `3306`)             |
+| `DATABASE_USER`     | Backend    | MySQL connection user name                         |
+| `DATABASE_PASSWORD` | Backend    | MySQL connection user password                     |
+| `DATABASE_NAME`     | Backend    | Database schema name                               |
+| `API_KEY`           | Backend    | Authentication token for POST/PUT/DELETE mutations |
+| `GEMINI_API_KEY`    | Backend    | Google Generative AI API Key for update parsers    |
+| `BACKEND_URL`       | MCP Server | Endpoint for Claude MCP commands to forward calls  |
 
 ---
 

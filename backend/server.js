@@ -4,7 +4,6 @@ import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import pool from './db.js';
-import { parseAndApplyUpdates } from './aiService.js';
 import ical from 'ical-generator';
 
 const __filename = fileURLToPath(import.meta.url);
