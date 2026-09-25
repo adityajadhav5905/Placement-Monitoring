@@ -65,7 +65,7 @@ const getCached = (key) => {
   }
   return item.data;
 };
-const setCached = (key, data, ttlMs = 15000) => {
+const setCached = (key, data, ttlMs = 1800000) => { // 30 minutes
   cache.set(key, { data, expiry: Date.now() + ttlMs });
 };
 const clearCache = () => {
